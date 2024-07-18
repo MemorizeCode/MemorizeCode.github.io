@@ -1,0 +1,1 @@
+import{r as e,u as a,j as t}from"./main.DTj3wLCD.js";const o=e.memo(()=>{const{t:s}=a();return t.jsx("main",{className:"flex flex-col space-y-10 m-10 pt-10",children:t.jsx("h2",{className:"text-4xl font-bold text-white",children:s("settings")})})});export{o as default};

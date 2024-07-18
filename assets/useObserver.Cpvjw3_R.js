@@ -1,1 +1,0 @@
-import{r as e}from"./main.DWJZLOQ4.js";function a(n){const[c,u]=e.useState(!1),r=e.useRef(null),t=e.useRef(null);return e.useEffect(()=>{const s=new IntersectionObserver(async o=>{o[0].isIntersecting&&(await n(),u(!0))});return t.current=s,r.current&&s.observe(r.current),()=>{t.current&&t.current.disconnect()}},[]),{ref:r,state:c}}export{a as u};
