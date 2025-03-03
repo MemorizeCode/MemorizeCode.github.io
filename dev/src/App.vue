@@ -120,6 +120,12 @@ main {
 
 /* 768 */
 @media (max-width: 768px) {
+  h1,
+  h2,
+  span,
+  p {
+    font-size: 16px;
+  }
   .header {
     grid-column: 1 / 0;
   }
@@ -158,7 +164,7 @@ main {
   h2,
   span,
   p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .header {
