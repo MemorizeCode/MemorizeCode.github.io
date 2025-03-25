@@ -53,9 +53,7 @@ watchEffect(async () => {
           </div>
         </div>
         <div class="pagination-container" v-if="cardsData.length > 0">
-          <div v-for="page in maxPage" :key="page">
-            <Pagination :page="page" :setPage="setPage" />
-          </div>
+            <Pagination :page="page" :setPage="setPage" :maxPage="maxPage" />
         </div>
       </main>
     </div>
