@@ -13,21 +13,37 @@ const leftArrow = computed(() => (color_theme.value === 'dark' ? left : left_bla
 const rightArrow = computed(() => (color_theme.value === 'dark' ? right : right_black));
 const updatePages = () => {
     const { page, maxPage } = props;
+    console.log(page, maxPage);
     pages.value = [];
-    if (maxPage <= 5) {
-        for (let i = 1; i <= maxPage; i++) {
+    if (page < 4) {
+        for (let i = 1; i <= 4; i++) {
             pages.value.push(i);
         }
+        pages.value.push('...');
+        pages.value.push(maxPage);
     }
     else {
-        if (page <= 3) {
-            pages.value.push(1, 2, 3, '...', maxPage);
+        if (page >= maxPage || page >= maxPage - 1) {
+            pages.value.push(1);
+            pages.value.push('...');
+            pages.value.push(maxPage - 1);
+            pages.value.push(maxPage);
         }
-        else if (page >= maxPage - 2) {
-            pages.value.push(1, '...', maxPage - 2, maxPage - 1, maxPage);
+        else if (page >= maxPage - 1) {
+            pages.value.push(1);
+            pages.value.push('...');
+            pages.value.push(maxPage - 2);
+            pages.value.push(maxPage - 1);
+            pages.value.push(maxPage);
         }
         else {
-            pages.value.push(1, '...', page - 1, page, page + 1, '...', maxPage);
+            pages.value.push(1);
+            pages.value.push('...');
+            pages.value.push(page - 1);
+            pages.value.push(page);
+            pages.value.push(page + 1);
+            pages.value.push('...');
+            pages.value.push(maxPage);
         }
     }
 };
