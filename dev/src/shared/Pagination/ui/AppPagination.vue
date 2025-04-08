@@ -34,19 +34,13 @@ const updatePages = () => {
     pages.value.push(maxPage);
   }
   else {
-    if (page >= maxPage || page >= maxPage - 1) {
+    if (page >= maxPage - 1 || page >= maxPage - 2) {
       pages.value.push(1);
       pages.value.push('...');
       pages.value.push(maxPage - 1);
       pages.value.push(maxPage);
     }
-    else if (page >= maxPage - 1) {
-      pages.value.push(1);
-      pages.value.push('...');
-      pages.value.push(maxPage - 2);
-      pages.value.push(maxPage - 1);
-      pages.value.push(maxPage);
-    } 
+
     else {
       pages.value.push(1);
       pages.value.push('...');
